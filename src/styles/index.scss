@@ -1,9 +1,106 @@
+// <Подключаем шрифты>
 @import './fonts.scss';
-@import './common.scss';
+// </Подключаем шрифты>
 
+//<Шрифт по умолчанию>
+$fontfamily:'PT Sans';
 /*
  font-family: 'Roboto';
  font-family:'Playfair Display';
   font-family: 'Ubuntu';
+  font-family: 'PT Sans';
 */
+//</Шрифт по умолчанию>
+
+//<Переменные>
+$minwidth:320px;
+$mw:950px;
+$md1:$mw + 12;
+$md2:990px;
+$md3:767px;
+$md4:480px;
+//</Переменные>
+
+//<Обнуление, общие параметры>
+@import './common.scss';
+body{
+  color:#000;
+  font-size: 14px;
+  &._lock{
+    overflow: hidden;
+    @media (max-width: $md3){
+      // width: 100%;
+      // position: fixed;
+      // overflow: hidden;
+    }
+  }
+}
+//</Обнуление, общие параметры>
+
+//<Оболочка>
+.wrapper{
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  &._loaded{
+
+  }
+}
+//</Оболочка>
+
+//<Основная сетка>
+._container{
+  max-width: $mw;
+  margin: 0 auto;
+  @media (max-width: $md1){
+    max-width: 970px;
+  }
+  @media (max-width: $md2){
+    max-width:750px;
+  }
+  @media (max-width: $md3){
+    max-width:none;
+    padding: 0 10px;
+  }
+}
+
+.header {
+  &__container {}
+  &__logo {}
+  &__menu {}
+  &__actions {}
+}
+.menu {
+  &__icon {}
+  &__body {}
+  &__list {}
+  &__link {}
+}
+.iconMenu {
+}
+.actionsHeader {
+  &__region {}
+  &__user {}
+}
+.userHeader {
+  &__icon {}
+  &__menu {}
+  &__link {
+    &_1 {}
+    &_2 {}
+    &_3 {}
+    &_4 {}
+  }
+}
+
+//</Основная сетка>
+
+
+
+
+
+
+
 
