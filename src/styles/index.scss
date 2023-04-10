@@ -96,6 +96,7 @@ body {
       &:after{
         content:'';
         height: 50%;
+        transition: all 0.3s ease 0s;
         background-image: linear-gradient(to top, #bb9c66 0%, rgba(187, 156, 102, 0) 100%);
         opacity: 0.06;
         top: 0;
@@ -105,6 +106,16 @@ body {
       }
     }
   }
+    @media (min-width:$md2){
+      &:hover{
+        .btn__body span{
+          &:after {
+            height:100%;
+            opacity: 0.3;
+          }
+        }
+      }
+    }
 }
 
 //</Обнуление, общие параметры>
@@ -393,9 +404,31 @@ body {
 }
 
 .mainSlider {
+  position: relative;
   &__body {}
   &__item {}
-  &__control {}
+  &__control {
+    position: absolute;
+    left: 50%;
+    bottom: 0px;
+    width: 100px;
+    height: 100px;
+    transform: translate(-50%,50%);
+    display: flex;
+    justify-content: center;
+    align-items:center;
+
+    &::after{
+      content:'';
+      background-color:#fff;
+      position: absolute;
+      width: 70%;
+      height: 70%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+  }
 }
 .itemMainSlider {
   text-align: center;
@@ -448,6 +481,22 @@ body {
     }
   }
 }
+
+.controlMainSlider {
+  &__arrow {
+    position: relative;
+    z-index: 2;
+    cursor:pointer;
+    &_prev {}
+    &_next {}
+  }
+  &__decor {
+    position: relative;
+    z-index: 2;
+    margin: 0 12px;
+  }
+}
+
 
 
 //</Основная сетка>
