@@ -27,6 +27,7 @@ $md4: 480px;
 body {
   color: #000;
   font-size: 14px;
+  font-family:$fontfamily ;
 
   &._lock {
     overflow: hidden;
@@ -35,6 +36,77 @@ body {
       // width: 100%;
       // position: fixed;
       // overflow: hidden;
+    }
+  }
+}
+
+._ibg{
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  img{display: none;}
+}
+
+.btn{
+  display: inline-flex;
+  min-height: 50px;
+  // justify-content: center;
+  // align-items: center;
+  padding:0px 0px;
+  position: relative;
+  &:before,&:after{
+    content:'';
+    position: absolute;
+    left:0;
+    height: 3px;
+    width: 100%;
+  }
+  &:before {
+    top: 0;
+    background-color:rgb(194,166,116);
+  }
+  &:after{
+    bottom:0;
+    background-color:rgb(141,100,46);
+  }
+  &__body{
+    position: relative;
+    &:before,&:after{
+      content:"";
+      position: absolute;
+      top: 0;
+      height: 100%;
+      width: 3px;
+      background-image:linear-gradient(to top, rgb(141,100,46),rgb(194,166,116));
+    }
+    &:before{
+      left: 0;
+
+    }
+    &:after{
+      right: 0;
+    }
+    span{
+      min-height: 50px;
+      line-height: 50px;
+      color:#fff;
+      font-size: 15px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      font-family: 'Ubuntu';
+      display: block;
+      padding: 0px 50px;
+      position: relative;
+      &:after{
+        content:'';
+        height: 50%;
+        background-image: linear-gradient(to top, #bb9c66 0%, rgba(187, 156, 102, 0) 100%);
+        opacity: 0.06;
+        top: 0;
+        left: 0;
+        position: absolute;
+        width: 100%;
+      }
     }
   }
 }
@@ -131,7 +203,6 @@ body {
 
   &__list {
     display: flex;
-    // justify-content: center;
 
     li {
       margin: 0 15px;
@@ -152,7 +223,7 @@ body {
   }
 
   &__link {
-    font-family: 'roboto';
+    font-family: 'Ubuntu';
     text-transform: uppercase;
     color: #fff;
 
@@ -324,5 +395,63 @@ body {
     }
   }
 }
+
+.mainSlider {
+  &__body {}
+  &__item {}
+  &__control {}
+}
+.itemMainSlider {
+  text-align: center;
+  padding:30px 0px 100px 0px;
+  position: relative;
+  &__content {
+    position: relative;
+    z-index: 2;
+  }
+  &__container {}
+  
+  &__bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+  &__text{
+    color:#fff;
+    font-size: 15px;
+    line-height: 25px;
+    max-width: 700px;
+    margin:25px auto 0 auto;
+  }
+  &__btn{
+    margin:55px 0px 0px 0px;
+  }
+}
+
+.title {
+  &__item {
+    font-family:'Playfair Display';
+    font-style: italic;
+    color: #bb9c66;
+    font-size: 40px;
+    margin:0px 0px 20px/40px * 1em 0px;
+  }
+  &__main {
+    font-size: 35px;
+    text-transform: uppercase;
+    font-family: 'Ubuntu';
+    letter-spacing: 3.2px;
+    font-weight: 500;
+    &_w{
+      color:#fff;
+    }
+    &_regular{
+      font-weight: 400;
+    }
+  }
+}
+
 
 //</Основная сетка>
