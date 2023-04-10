@@ -402,10 +402,17 @@ body {
     }
   }
 }
-
+.swiper-slide{
+  height: auto; /*при помощи этого св-ва растянул все слайды на высоту наибольшего*/
+}
 .mainSlider {
   position: relative;
-  &__body {}
+  // .swiper-wrapper{   должно было растянуть все слайды до высоты наибольшего но у меня не сработало
+  //   align-items:stretch;
+  // }
+  &__body {
+   
+  }
   &__item {}
   &__control {
     position: absolute;
@@ -417,6 +424,8 @@ body {
     display: flex;
     justify-content: center;
     align-items:center;
+
+    z-index: 1;
 
     &::after{
       content:'';
