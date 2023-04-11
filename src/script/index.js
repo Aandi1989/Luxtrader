@@ -33,7 +33,6 @@ ibg();
 
 //BildSlider
 let sliders = document.querySelectorAll('._swiper');
-console.log(sliders)
 if(sliders){
     for(let index = 0; index <sliders.length; index++){
         let slider = sliders[index];
@@ -69,9 +68,24 @@ let main_slider = new Swiper('.mainSlider__body',{
     spaceBetween:0,
     // autoHeight:true,
     speed:800,
+    loop:true,
     
     navigation:{
         nextEl:'.controlMainSlider__arrow_next',
         prevEl:'.controlMainSlider__arrow_prev',
+    },
+    breakpoints:{
+        320:{
+            autoHeight:true, /*определяются при загрузке страницы и при изменении */ 
+        },                   /*ширины экрана могут не сработать до обновления страницы*/ 
+        768:{
+            autoHeight:false, 
+        }
     }
 })
+
+// window.addEventListener('resize',function(){
+//     main_slider.update()
+//     /*должно было вылечить плавную работу breakpoints но не помогло */
+// })
+//------------
