@@ -103,10 +103,11 @@ let main_slider = new Swiper('.mainSlider__body',{
 let second_slider = new Swiper('.sliderLots__body',{
     observer:true,
     observeParents:true,
-    slidesPerView:3,
+    
     spaceBetween:0,
     // autoHeight:true,
     speed:800,
+    slidesPerView:3,
     loop:true,
     
     navigation:{
