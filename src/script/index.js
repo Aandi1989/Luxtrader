@@ -109,6 +109,7 @@ let second_slider = new Swiper('.sliderLots__body',{
     speed:800,
     slidesPerView:3,
     loop:true,
+    grabCursor:true,
     
     navigation:{
         nextEl:'.controlSliderLots__arrow_next',

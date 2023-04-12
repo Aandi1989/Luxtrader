@@ -523,15 +523,15 @@ body {
 
 // ------------------------------------------------------------------
 
-.swiper-slide {
-  height: auto;
+// .swiper-slide {
+//   height: auto;
 
-  /*при помощи этого св-ва растянул все слайды на высоту наибольшего*/
-  @media (max-width:$md3) {
-    height: 100%;
-    /*прекращает растягивать слайды и позволяет начать работать autoHight(см параметры swiper в js) */
-  }
-}
+//   /*при помощи этого св-ва растянул все слайды на высоту наибольшего*/
+//   @media (max-width:$md3) {
+//     height: 100%;
+//     /*прекращает растягивать слайды и позволяет начать работать autoHight(см параметры swiper в js) */
+//   }
+// }
 
 .mainSlider {
   position: relative;
@@ -541,7 +541,14 @@ body {
   // }
   &__body {}
 
-  &__item {}
+  &__item {
+    height: auto;
+    /*при помощи этого св-ва растянул все слайды на высоту наибольшего*/
+  @media (max-width:$md3) {
+    height: 100%;
+    /*прекращает растягивать слайды и позволяет начать работать autoHight(см параметры swiper в js) */
+  }
+  }
 
   &__control {
     position: absolute;
@@ -683,6 +690,7 @@ body {
   }
   &__slide {
     padding: 0 50px;
+    height: auto;
   }
   &__control {}
 }
@@ -744,6 +752,7 @@ body {
   height: 100%;
   display: flex;
   flex-direction: column;
+  text-align: center;
   &__header {
     text-align: center;
     margin:0px 0px 30px 0px;
@@ -751,7 +760,8 @@ body {
   }
   &__image {
     display: block;
-    height: 250px;
+    // height: 250px;
+    padding:0px 0px 100% 0px;
   }
   &__title {
     font-size: 21px;
@@ -765,7 +775,6 @@ body {
   &__info {
   }
   &__btn {
-    align-self: center;
   }
 }
 .timerLot {
