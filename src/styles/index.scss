@@ -56,7 +56,7 @@ body {
   position: relative;
   display: inline-block;
  
-
+ 
   &:before,
   &:after {
     content: '';
@@ -104,7 +104,7 @@ body {
       letter-spacing: 1.5px;
       text-transform: uppercase;
       font-family: 'Ubuntu';
-      display: inline-flex;
+      display: flex;
       justify-content: center;
       align-items: center;
       padding: 0px 45px;
@@ -129,7 +129,7 @@ body {
       font-size:18px;
       color:#000;
       letter-spacing:normal;
-      padding:0 25px;
+      padding:0 10px;
     }
   }
 
@@ -523,16 +523,6 @@ body {
 
 // ------------------------------------------------------------------
 
-// .swiper-slide {
-//   height: auto;
-
-//   /*при помощи этого св-ва растянул все слайды на высоту наибольшего*/
-//   @media (max-width:$md3) {
-//     height: 100%;
-//     /*прекращает растягивать слайды и позволяет начать работать autoHight(см параметры swiper в js) */
-//   }
-// }
-
 .mainSlider {
   position: relative;
 
@@ -760,7 +750,6 @@ body {
   }
   &__image {
     display: block;
-    // height: 250px;
     padding:0px 0px 100% 0px;
   }
   &__title {
@@ -771,10 +760,14 @@ body {
     position: relative;
     z-index: 1;
     flex: 1 1 auto;
+    margin:0px 0px 27px/21px * 1em 0px;
   }
   &__info {
   }
   &__btn {
+    margin: 0 25px;
+
+    
   }
 }
 .timerLot {
@@ -812,21 +805,78 @@ body {
 }
 
 .infoLot {
-  &__statistic {}
-  &__icon {}
-  &__value {}
-  &__currentBet {}
+  display: flex;
+  justify-content: center;
+  margin:0px 0px 35px 0px;
+
+  &__statistic {
+    flex:0 0 50px;
+    display: flex;
+    flex-direction: column;
+    // align-items:center;
+  }
+  &__icon {
+    width: 18px;
+    height: 18px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    position: relative;
+    align-self: center;
+    img{
+      
+      position: relative;
+      z-index: 2;
+    }
+    &:after{
+      content:'';
+      width: 100%;
+      height: 100%;
+      position: absolute;
+
+      transform: rotate(-45deg);
+      background-color:#000;
+    }
+    &_l{
+      img{
+        left: 1.5px;
+      }
+    }
+  }
+  &__value {
+    font-size: 14px;
+    border-bottom: 1px solid #bb9c66;
+    padding:8px 0px 6px 0px;
+  }
+  &__currentBet {
+    flex: 1 1 auto;
+  }
 }
 .currentBetInfoLot {
+  padding: 0 5px;
+  position: relative;
+  &:after{
+    content:'';
+    position: absolute;
+    width: 72px;
+    height: 72px;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    border:1px solid #bb9c66;
+  }
+  div{
+    position: relative;
+    z-index: 1;
+  }
   &__label {}
-  &__value {}
-  &__currency {}
+  &__value {
+    font-size: 28px;
+    margin:19px 0px 10px 0px;
+  }
+  &__currency {
+  }
 }
-.btn {
-  &_big {}
-  &__body {}
-}
-
 
 
 
