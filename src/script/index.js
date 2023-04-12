@@ -66,6 +66,8 @@ if(sliders){
 
 function sliders_bild_callback(params){}
 
+// first slider=================================
+
 let main_slider = new Swiper('.mainSlider__body',{
     observer:true,
     observeParents:true,
@@ -93,4 +95,34 @@ let main_slider = new Swiper('.mainSlider__body',{
 //     main_slider.update()
 //     /*должно было вылечить плавную работу breakpoints но не помогло */
 // })
-//------------
+
+//=======================================
+
+// second slider=========================
+
+let second_slider = new Swiper('.sliderLots__body',{
+    observer:true,
+    observeParents:true,
+    slidesPerView:3,
+    spaceBetween:0,
+    // autoHeight:true,
+    speed:800,
+    loop:true,
+    
+    navigation:{
+        nextEl:'.controlSliderLots__arrow_next',
+        prevEl:'.controlSliderLots__arrow_prev',
+    },
+    // breakpoints:{
+    //     320:{
+    //         autoHeight:true, /*определяются при загрузке страницы и при изменении */ 
+    //     },                   /*ширины экрана могут не сработать до обновления страницы*/ 
+    //     768:{
+    //         autoHeight:false, 
+    //     }
+    // }
+})
+
+// ======================================
+
+
