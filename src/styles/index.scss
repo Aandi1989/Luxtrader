@@ -677,10 +677,16 @@ body {
 .sliderLots {
   &__body {
     margin: 0px -50px;
+    @media (max-width:$md2){
+      margin: 0px -15px;
+    }
   }
   &__slide {
     padding: 0 50px;
     height: auto;
+    @media (max-width:$md2){
+      padding: 0px 15px;
+    }
   }
   &__control {}
 }
@@ -698,6 +704,9 @@ body {
       background:url("../static/images/lots/arrow.jpg") 0 0 no-repeat;
       width: 108px;
       height: 35px;
+      @media (max-width:400px){
+        width: 70px;
+      }
     }
     &:after {
       content:'';
@@ -723,14 +732,19 @@ body {
     text-transform: uppercase;
     font-family: 'Ubuntu';
     margin: 0 20px;
+    text-align: center;
+    @media (max-width:410px){
+      margin: 0 5px;
+    }
     &:after{
       content:'';
       position: absolute;
-      width: 220px;
-      height: 220px;
-      left: -70px;
-      top: -100px;
-      background:url(../static/images/lots/circle.png)  no-repeat;
+      width: 100px;
+      height: 100px;
+      border-radius:50%;
+      border:2px solid #bb9c66;
+      top: -42px;
+      left: -10px;
     }
   }
 }
@@ -754,13 +768,19 @@ body {
   }
   &__title {
     font-size: 21px;
-    line-height: 25px;
+    line-height: calc(25 / 21);
     color:#000;
     text-transform: uppercase;
     position: relative;
     z-index: 1;
     flex: 1 1 auto;
     margin:0px 0px 27px/21px * 1em 0px;
+    @media (max-width:$md2){
+      font-size: 18px;
+    }
+    @media (max-width:550px){
+      font-size: 21px;
+    }
   }
   &__info {
   }
@@ -774,9 +794,6 @@ body {
   width: 72px;
   height: 72px;
   transform: translate(-50%, 50%);
-  // display: inline-flex;
-  // flex-direction: column;
-  // align-items:center;
   padding:4px 0px 0px 0px;
   position: absolute;
   left: 50%;
@@ -813,7 +830,6 @@ body {
     flex:0 0 50px;
     display: flex;
     flex-direction: column;
-    // align-items:center;
   }
   &__icon {
     width: 18px;
@@ -833,7 +849,6 @@ body {
       width: 100%;
       height: 100%;
       position: absolute;
-
       transform: rotate(-45deg);
       background-color:#000;
     }
@@ -850,6 +865,9 @@ body {
   }
   &__currentBet {
     flex: 1 1 auto;
+    @media (max-width:550px){
+      flex: 0 0 auto;
+    }
   }
 }
 .currentBetInfoLot {
@@ -873,6 +891,15 @@ body {
   &__value {
     font-size: 28px;
     margin:19px 0px 10px 0px;
+    white-space: nowrap;
+    @media (max-width:$md2){
+      font-size: 20px;
+      margin:25px 0px 10px 0px;
+    }
+    @media (max-width:550px){
+      font-size: 28px;
+      margin:19px 20px 10px 20px;
+    }
   }
   &__currency {
   }

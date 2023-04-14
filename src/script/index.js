@@ -115,14 +115,17 @@ let second_slider = new Swiper('.sliderLots__body',{
         nextEl:'.controlSliderLots__arrow_next',
         prevEl:'.controlSliderLots__arrow_prev',
     },
-    // breakpoints:{
-    //     320:{
-    //         autoHeight:true, /*определяются при загрузке страницы и при изменении */ 
-    //     },                   /*ширины экрана могут не сработать до обновления страницы*/ 
-    //     768:{
-    //         autoHeight:false, 
-    //     }
-    // }
+    breakpoints:{
+        320:{
+            slidesPerView:1,  
+        }, 
+        550:{
+            slidesPerView:2,  
+        },           
+        768:{
+            slidesPerView:3, 
+        }
+    }
 })
 
 // ======================================
