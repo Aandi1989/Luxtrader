@@ -1223,15 +1223,12 @@ body {
       }
     }
 		&__item {}
-    @media (max-width:$md3){
+    @media (max-width:$md2){
       &__column{
         flex: 0 1 50%;
       }
     }
     @media (max-width:600px){
-      &__row{
-        // flex-direction: column;
-      }
       &__column{
         flex: 1 1 100%;
       }
@@ -1241,9 +1238,7 @@ body {
   display: flex;
   flex-direction: column;
   height: 100%;
-		&__image {
-      padding:0px 0px 100% 0px;
-    }
+		&__image {}
 		&__title {
       color:#fff;
       font-size: 21px;
@@ -1281,8 +1276,18 @@ body {
         position: relative;
         z-index: 1;
       }
+      @media (max-width:600px){
+        margin: 0 10%;
+      }
+  }
+  @media (max-width:600px){
+    &__title,&__text{
+      margin:0px 0px 10px 0px;
+    }
+  }
 }
-}
+
+// ==========================================
 
 
 
