@@ -130,4 +130,26 @@ let second_slider = new Swiper('.sliderLots__body',{
 
 // ======================================
 
+// third slider ========================
+
+let third_slider = new Swiper('.sliderQuotes__body',{
+    effect:'fade',
+    observer:true,
+    observeParents:true,
+    slidesPerView:1,
+    spaceBetween:0,
+    // autoHeight:true,
+    speed:800,
+    loop:true,
+    // grabCursor:true,
+    
+    navigation:{
+        nextEl:'.controlSliderQuotes__link',
+        // nextEl:'.controlSliderQuotes_next',
+        // prevEl:'.controlSliderQuotes_prev',
+    }
+})
+
+// =====================================
+
 

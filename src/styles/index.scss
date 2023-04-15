@@ -1092,6 +1092,9 @@ body {
   }
   &__text{
     margin: 85px 0 77px 0;
+    @media (max-width:$md3){
+      margin: 25px 0 17px 0;
+    }
   }
 }
 
@@ -1218,17 +1221,19 @@ body {
       padding:0px 50px 0px 50px;
       text-align: center;
       margin:0px 0px 50px 0px;
-      &:last-child{
-        margin:0px 0px 0px 0px;
-      }
+      
     }
 		&__item {}
     @media (max-width:$md2){
       &__column{
         flex: 0 1 50%;
+        &:last-child{
+          margin:0px 0px 0px 0px;
+        }
       }
     }
     @media (max-width:600px){
+      padding:40px 0;
       &__column{
         flex: 1 1 100%;
       }
@@ -1276,7 +1281,7 @@ body {
         position: relative;
         z-index: 1;
       }
-      @media (max-width:600px){
+      @media (max-width:$md2){
         margin: 0 10%;
       }
   }
@@ -1289,9 +1294,98 @@ body {
 
 // ==========================================
 
+.quotes {
+  &__container {
+    padding:65px 10px 74px 10px;
+    overflow: hidden;
+    @media (max-width:$md3){
+      padding:25px 10px 0px 10px;
+    }
+  }
+  &__slider {}
+}
 
+.sliderQuotes {
+  &__body {}
+  &__slide {
+    display: flex;
+    opacity: 0 !important;
+    &.swiper-slide-active{
+      opacity:1 !important;
+    }
+  }
+  &__image {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    padding:0px 20px;
+    flex: 0 0 320px/950px * 100%;
+    img{
+      max-width: 100%;
+    }
+  }
+  &__content {
+    flex: 0 1 515px;
+    align-self: center;
+  }
+  &__title {
+    font-size: 25px;
+    font-style: italic;
+    margin:0px 0px 30px/25px * 1em 0px;
+  }
+  &__info {
+    font-size: 15px;
+    line-height: calc(35 / 21);
+    color: #1c242a;
+  }
+  &__control {}
+}
 
+.controlSliderQuotes {
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  max-width: 400px;
+  margin: 0 auto;
+  &__decor {
+    flex: 0 1 33.333%;
+    display: flex;
+    align-items:center;
+    &:before{
+      content:'';
+      flex: 1 1 auto;
+      height: 1px;
+      background-color:#bb9c66;
+    }
+    &:after{
+      content:'';
+      margin:0px 0px 0px 5px;
+      width: 10px;
+      height: 10px;
+      border-radius:50%;
+      border:1px solid #bb9c66;
+    }
+    &:last-child{
+      flex-direction: row-reverse;
+      &:after{
+        margin:0px 5px 0px 0px;
+      }
+    }
+  }
+  &__link {
+    flex: 0 1 33.333%;
+    text-align: center;
+  }
+  &__circle{
+    display: inline-flex;
+    cursor:pointer;
+    width: 90px;
+    height: 90px;
+    background:url('../static/images/quotes/refresh.png');
+  }
+}
 
+// ==============================
 
 
 
