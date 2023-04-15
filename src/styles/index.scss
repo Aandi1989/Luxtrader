@@ -957,12 +957,12 @@ body {
 // ==========================================
 
 .categories {
-  margin:0px 0px 85px 0px;
   ._container{
     overflow: hidden;
   }
   &__container {
   position: relative;
+
   &:after{
     content:'';
     position: absolute;
@@ -977,7 +977,7 @@ body {
   &__row {
     display: flex;
     flex-wrap: wrap;
-    margin: 0 -50px;
+    margin: 0 -50px 0px -50px;
 
     &:first-child {
       padding: 35px 0px 0px 0px;
@@ -1006,12 +1006,6 @@ body {
         }
       }
     }
-
-    // &:last-child {
-    //   .categories__column::after {
-    //     display: none;
-    //   }
-    // }
   }
 
   &__column {
@@ -1096,7 +1090,38 @@ body {
       }
     }
   }
+  &__text{
+    margin: 85px 0 77px 0;
+  }
 }
+
+.textCategories {
+  &__container {
+    padding:10px 0px 20px 110px;
+    background:url(../static/images/categories/decorShort.png) -20px 6px repeat-y;
+    position: relative;
+    &:before{
+      content:'';
+      background:url('../static/images/categories/fragmentDecor.png') 0 0 no-repeat;
+      position: absolute;
+      top: -1px;
+      left: -20px;
+      width: 126px;
+      height: 12px;
+    }
+    p{
+      color: #333333;
+      font-size: 15px;
+      line-height: calc(25 / 15);
+      margin:0px 0px 25px 0px;
+      &:last-child{
+        margin:0px 0px 0px 0px;
+      }
+    }
+  }
+}
+
+
 
 .item {
   position: relative;
