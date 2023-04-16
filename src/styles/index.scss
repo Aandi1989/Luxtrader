@@ -1122,6 +1122,15 @@ body {
       }
     }
   }
+  @media (max-width:450px){
+    &__container{
+      background:none;
+      padding:0px 10px 20px 10px;
+      &:before{
+        display: none;
+      }
+    }
+  }
 }
 
 // ================================================
@@ -1313,6 +1322,9 @@ body {
     &.swiper-slide-active{
       opacity:1 !important;
     }
+    @media (max-width:$md4){
+      display: block;
+    }
   }
   &__image {
     display: flex;
@@ -1387,7 +1399,178 @@ body {
 
 // ==============================
 
+.info {
+  padding:0px 0px 75px 0px;
+  &__container {}
+  &__row {
+    display: flex;
+    margin: 0px -22px;
+    flex-wrap: wrap;
+    @media (max-width:$md3){
+      display: block;
+    }
+  }
+  &__column {
+    flex: 0 1 50%;
+    padding: 0px 22px;
+    margin:0px 0px 55px 0px;
+    &:last-child{
+      flex: 1 1 100%;
+      margin:0px 0px 0px 0px;
+    }
+  }
+  &__block {}
+  &__title {}
+  &__content {}
+  &__item {
+    margin:0px 0px 30px 0px;
+    &:last-child{
+      margin:0px 0px 0px 0px;
+    }
+  }
+  &__date {
+    color:#bb9c66;
+    font-size: 12px;
+    margin:0px 0px 5px 0px;
+    
+  }
+  &__label {
+    font-weight: 700;
+    color:#333333;
+    text-decoration: underline;
+    display: inline-block;
+    font-size: 15px;
+    line-height: calc(25 / 15);
+    margin:0px 0px 5px 0px;
+  }
+  &__text {
+    color:#333333;
+    font-size: 15px;
+    line-height: calc(21 / 15);
+  }
+  &__subscribe {}
+  @media (max-width:$md3){
+    &__column {
+      margin:0px 0px 20px 0px;
+      &:last-child{
+        margin:0px 0px 0px 0px;
+      }
+    }
+    &__item {
+      margin:0px 0px 10px 0px;
+      &:last-child{
+      margin:0px 0px 0px 0px;
+    }
+    }
+  }
+  @media (max-width:$md3){
+    padding:0px 0px 30px 0px;
+  }
+}
+.titleInfo {
+  display: flex;
+  align-items:center;
+  font-size: 35px;
+  font-weight: 500;
+  letter-spacing: 3.5px;
+  text-transform: uppercase; 
+  margin:0px 0px 30px 0px;
+  span{
+    &:first-child{
+      margin:0px 10px 0px 0px;
+      img{
+        display: flex;
+        justify-content: center;
+        align-items:center;
+      }
+    }
+  }
+  @media (max-width:$md3){
+    margin:0px 0px 10px 0px;
+  }
+}
+.subscribe {
+  &__title {}
+  &__body {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -22px;
+    @media (max-width:$md3){
+      display: block;
+    }
+  }
+  &__column {
+    flex: 0 1 50%;
+    padding: 0 22px;
+  }
+  &__text {
+    color:#333333;
+    font-size: 15px;
+    line-height: calc(21 / 15);
+  }
+  &__form {}
+}
+.formSubscribe {
+  height: 50px;
+  border: 3px solid #bb9c66;
+  background-color: #ffffff;
+  display: flex;
+  @media (max-width:$md3){
+    margin:10px 0px 0px 0px;
+  }
+  &__input {
+    flex: 1 1 auto;
+    .input{
+      border-radius: 0 !important;
+      width: 100%;
+      display: block;
+      padding: 0 25px;
+      color: #4f4f4f;
+      font-size: 15px;
+      height: 100%;
+      &:focus{
+        color:#000;
+      }
+    }
+    @media (max-width:$md4){
+      .input{
+        padding: 0 10px;
+      }
+    }
+  }
+  &__btn {
+    position: relative;
+    flex: 0 0 95px;
+    background-color:transparent;
+    &:before{
+      content:'';
+      width: 1px;
+      height: 32px;
+      background-color:#bb9c66;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translate(0px, -50%);
+    }
+    span{
+      background:url("../static/images/info/arrow.png") right no-repeat;
+      color: #1c242a;
+      font-size: 21px;
+      line-height: calc(25 / 21);
+      padding:0px 32px 0px 0px;
+      letter-spacing: 2.12px;
+    }
+    @media (max-width:$md4){
+      flex: 0 0 50px;
+    }
+    span{
+      background:none;
+      padding:0px 0px 0px 0px;
+    }
+  }
+}
 
+// ==============================
 
 
 //</Основная сетка>
