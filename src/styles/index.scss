@@ -259,8 +259,11 @@ body {
 
 .header {
   background-color: #1c242a;
-  position: relative;
-  z-index: 2;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 3;
 
   &__container {
     display: flex;
@@ -536,6 +539,7 @@ body {
 
 .mainSlider {
   position: relative;
+  padding:75px 0px 0px 0px;
 
   // .swiper-wrapper{  /* должно было растянуть все слайды до высоты наибольшего но у меня не сработало */
   //   align-items:stretch;
