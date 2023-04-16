@@ -1572,5 +1572,108 @@ body {
 
 // ==============================
 
+.footer {
+  background-color: #1c242a;
+  padding: 45px 0;
+  @media(max-width:$md3){
+    padding: 20px 0;
+  }
+  &__container {
+    display: flex;
+    @media(max-width:$md3){
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+  &__column {
+    &_full{
+      flex: 1 1 auto;
+    }
+    &:first-child{
+      order:3;
+    }
+    &:nth-child(2){
+      order: 2;
+    }
+    &:last-child{
+      order:1;
+    }
+  }
+  &__logo {
+    display: inline-block;
+    margin:0px 0px 25px 0px;
+    @media (max-width:$md3){
+      margin:30px 0px 10px 0px;
+    }
+  }
+  &__info {
+    color:#bb9c66;
+    white-space: nowrap;
+  }
+  &__menu {
+    padding:0px 30px;
+
+  }
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    li{
+      margin:15px 15px 0px 0px;
+    }
+    @media (max-width:$md3){
+      justify-content: center;
+      margin:15px 7px 0px 7px;
+    }
+  }
+  &__link {
+    font-size: 14px;
+    font-weight: 500;
+    color:#fff;
+    text-transform: uppercase;
+    letter-spacing: 1.4px;
+    @media (min-width:992px){
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+  }
+  &__contacts{
+      text-align: right;
+      display: flex;
+      flex-direction: column;
+      align-items:flex-end;
+      padding:15px 0px 0px 0px;
+      @media (max-width:$md3){
+        align-items:center;
+      }
+  }
+  &__phone {
+    white-space: nowrap;
+    display:flex;
+    align-items:flex-start;
+    color: #bb9c66;
+    font-size: 28px;
+    font-weight: 400;
+    text-transform: uppercase;
+    small{
+      font-size: 20px;
+      margin:2px 5px 0px 0px;
+    }
+  }
+  &__callback {
+    color:#bb9c66;
+    padding:0px 0px 0px 12px;
+    background:url('../static/images/footerCallBack.png') left no-repeat;
+    span{
+      border-bottom:1px dashed ; 
+      display: inline-block;
+      margin:7px 0px 0px 0px;
+    }
+  }
+}
+
+
+
+//  =============================
 
 //</Основная сетка>
