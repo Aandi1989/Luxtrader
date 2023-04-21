@@ -25,3 +25,6 @@ yarn-error.log*
 *.sln
 *.sw?
 *.http
+
+#Ignore questions.txt file
+questions.txt
